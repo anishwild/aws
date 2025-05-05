@@ -1,0 +1,21 @@
+Ass-9
+
+After install npm
+1. touch index.js
+2. nano index.js
+3. paste it
+const http = require('http');
+
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello from EC2 👋');
+});
+
+server.listen(port, '0.0.0.0', () => {
+  console.log(`Server running at http://0.0.0.0:${port}/`);
+});
+4. node index.js
+you should see server is running 
+5. paste ip address of Ec2  with port in browser
